@@ -26,6 +26,16 @@ class Address(Base):
     person_id = Column(Integer, ForeignKey('person.id'))
     person = relationship(Person)
 
+class password(Base):
+    __tablename__ = 'pass'
+    # Here we define columns for the table address.
+    # Notice that each column is also a normal Python instance attribute.
+    id = Column(Integer, primary_key=True)
+    datos = Column(String(250))
+    person_id = Column(Integer, ForeignKey('person.id'))
+    person = relationship(Person)
+
+#NO TOCAR//////////////
     def to_dict(self):
         return {}
 
